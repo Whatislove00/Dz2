@@ -122,6 +122,10 @@ int main()
 		one = 0;		
 		t = -1;
 	}
+	for (i = 0; i < n; i++)
+	{
+		fprintf(file, "%d;\n", (i + 1));
+	}
 	fprintf(file, "}");
 	fclose(file);		
 	system("dot C:\\Users\\vladi\\Documents\\GitHub\\Dz2\\dz2\\file.txt -Tbmp -o file.bmp");
