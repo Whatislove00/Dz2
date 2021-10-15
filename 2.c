@@ -124,8 +124,8 @@ int main()
 	}
 	fprintf(file, "}");
 	fclose(file);		
-	system("dot C:\\Users\ vladi\Documents\GitHub\Dz2\dz2\\file.txt -Tbmp -o file.bmp");
-	system("rundll32  \"%ProgramFiles%\\Windows Photo Viewer\\PhotoViewer.dll\", ImageView_Fullscreen C:\\Users\ vladi\Documents\GitHub\Dz2\dz2\\file.bmp");
+	system("dot C:\\Users\\vladi\\Documents\\GitHub\\Dz2\\dz2\\file.txt -Tbmp -o file.bmp");
+	system("rundll32  \"%ProgramFiles%\\Windows Photo Viewer\\PhotoViewer.dll\", ImageView_Fullscreen C:\\Users\\vladi\\Documents\\GitHub\\Dz2\\dz2\\file.bmp");
 
 	for (i = 0; i < n; i++) 	
 	{
