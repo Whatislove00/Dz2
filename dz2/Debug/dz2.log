@@ -1,27 +1,2 @@
 ﻿  2.c
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(91,7): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(91,31): warning C4047: =: "int" отличается по уровням косвенного обращения от "FILE *"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(92,14): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(92,14): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(92,10): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(101,17): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(101,17): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(101,13): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(102,17): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(102,17): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(102,13): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(110,18): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(110,18): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(110,14): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(119,17): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(119,17): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(119,13): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(127,15): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(127,15): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(127,11): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(129,14): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(129,14): warning C4047: функция: "FILE *const " отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(129,10): warning C4024: fprintf: различные типы для формального и фактического параметров 1
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(130,13): error C2065: file: необъявленный идентификатор
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(130,13): warning C4047: функция: "FILE *" отличается по уровням косвенного обращения от "int"
-C:\Users\vladi\Documents\GitHub\Dz2\2.c(130,9): warning C4024: fclose: различные типы для формального и фактического параметров 1
+  dz2.vcxproj -> C:\Users\vladi\Documents\GitHub\Dz2\dz2\Debug\dz2.exe
