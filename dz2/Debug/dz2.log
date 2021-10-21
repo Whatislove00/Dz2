@@ -1,2 +1,8 @@
 ﻿  2.c
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(115,10): warning C4473: "printf": передано недостаточно аргументов для строки формата
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(115,10): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 0
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(115,10): message : отсутствующий вариативный аргумент "1" требуется для строки форматирования "%d"
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(116,14): warning C4473: "printf": передано недостаточно аргументов для строки формата
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(116,14): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 0
+C:\Users\vladi\Documents\GitHub\Dz2\2.c(116,14): message : отсутствующий вариативный аргумент "1" требуется для строки форматирования "%d"
   dz2.vcxproj -> C:\Users\vladi\Documents\GitHub\Dz2\dz2\Debug\dz2.exe

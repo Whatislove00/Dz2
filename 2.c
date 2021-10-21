@@ -7,10 +7,10 @@
 int main()
 {
 	char cur;		   
-	int k = 1, sum = 1, i, j, n, length = 0, one;		    
+	int k = 1, i, j, n, length = 0, one, h = 0, g=0;		    
 	FILE* file;		    
 	
-	printf("Kolichestvo Vershin: ");
+	printf("Number of vertices : ");
 	scanf_s("%d", &n);					
 	int* flag = (int*)malloc(n * sizeof(int));
 	int** a = (int**)malloc(n * sizeof(int*));		
@@ -21,7 +21,7 @@ int main()
 	cur = getchar();			
 	for (i = 0; i < n; i++)
 	{
-		printf("%d stroka : ", i+1);
+		printf("%d line : ", i+1);
 		cur = getchar();			
 		for (j = 0; cur != '\n'; j++)	
 		{
@@ -61,32 +61,59 @@ int main()
 	}
 
 	flag[0] = 1;
-	for (i = 1; i < n; i++)
-		flag[i] = 0;
 	for (i = 0; i < n; i++)
 	{
 		if (flag[i] == 1)
 		{
 			for (j = 0; j < n; j++)
-			{
+			{	
 				if (flag[j] != 1)
 				{
 					for (int m = 0; m < length; m++)
-					{
+					{	
 						if ((a[i][m] == 1) && (a[j][m] == 1))
 						{
 							flag[j] = 1;
-							sum++;
 							break;
+						}
+						else
+						{
+							if ((a[i][m] == 1) || (a[j][m] == 1))
+							{
+								flag[j] = 1;
+								break;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	if (sum == n)
-		printf("Sviazan\n");
-	else printf("Ne Sviazan\n");
+	for (j = 0; j < n; j++)
+	{
+		g = 0;
+		for (int l = 0; l < length; l++)
+		{
+			if (a[j][l] == 0)
+			{
+				g++;
+				if (g == length)
+				{
+					j = n;
+				}
+			}
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (flag[i] == 1)
+		{
+			h++;		
+		}
+	}
+	if ((h == n) && (g != length))
+		printf("Connected\n %d");
+	else printf("Not connected\n %d");
 
 	file = fopen("file.txt", "w");	
 	fprintf(file, "graph A{\n");				
