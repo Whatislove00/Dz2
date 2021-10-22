@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+int main(void)
 {
 	char cur;		   
 	int k = 1, i, j, n, length = 0, one, h = 0, g=0;		    
@@ -112,8 +112,8 @@ int main()
 		}
 	}
 	if ((h == n) && (g != length))
-		printf("Connected\n %d");
-	else printf("Not connected\n %d");
+		printf("Connected\n");
+	else printf("Not connected\n");
 
 	file = fopen("file.txt", "w");	
 	fprintf(file, "graph A{\n");				
