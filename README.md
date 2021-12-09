@@ -42,25 +42,24 @@ int is_con(int **v_arr, int *is_c_arr, int cur_v, int v_count){
 
 ``` C
 
-int compare(const void *a, const void *b){
-    return *(int*)a - *(int*)b;
-}
+ int **degree_ed_arr = (int**)malloc(v_count * sizeof(int*));
 
-----------------------------------------
-
- int degree_ed_arr[v_count][2];
-    for (int i = 0; i < v_count; ++i){
+    for (int i = 0; i < v_count; ++i) {
+        degree_ed_arr[i] = malloc(sizeof(int) * 2);
         degree_ed_arr[i][1] = i;
     }
-    
-    for(int i = 0; i < v_count; ++i){
+   
+    for (int i = 0; i < v_count; ++i) {
+
         degree_ed_arr[i][0] = 0;
-        for(int j = 0; j < v_count; ++j){
+       
+        for (int j = 0; j < v_count; ++j) {
+
             degree_ed_arr[i][0] += v_arr[i][j];
         }
     }
-
-    qsort(degree_ed_arr, v_count, 2*sizeof(int), compare);
+    
+    qsort(degree_ed_arr, v_count, sizeof(int*), compare);
 ```
 
 ## Структурная схема алгоритма
