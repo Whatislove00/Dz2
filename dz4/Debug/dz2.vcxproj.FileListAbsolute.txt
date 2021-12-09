@@ -1,2 +1,4 @@
 C:\Users\vladi\Documents\GitHub\Dz2\dz2\Debug\dz2.exe
 C:\Users\vladi\Documents\GitHub\Dz2\dz2\Debug\dz2.pdb
+C:\Users\vladi\Documents\GitHub\Dz4\dz4\Debug\dz4.exe
+C:\Users\vladi\Documents\GitHub\Dz4\dz4\Debug\dz4.pdb
