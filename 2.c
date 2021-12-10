@@ -23,6 +23,7 @@ int compare(const void *a, const void *b) {
 int main(int argc, char **argv) {
     FILE *file1;
     FILE *file2;
+
     file1 = fopen("graph1.dot", "w");
     file2 = fopen("graph2.dot", "w");
     fprintf(file1, "graph g {\n");
@@ -112,8 +113,21 @@ int main(int argc, char **argv) {
             degree_ed_arr[i][0] += v_arr[i][j];
         }
     }
-    
-    qsort(degree_ed_arr, v_count, sizeof(int*), compare);
+
+    unsigned long* sort_arr = (unsigned long*)malloc(sizeof(unsigned long) * v_count);
+
+    for(int i = 0 ; i < v_count; i++)
+    {
+    sort_arr[i] = ((unsigned long)degree_ed_arr[i][0] << 32u) + (unsigned long)degree_ed_arr[i][1];
+    }
+
+    qsort(sort_arr, v_count, sizeof(unsigned long), compare);
+
+    for(int i = 0 ; i < v_count; i++)
+    {
+    degree_ed_arr[i][0] = (int)((sort_arr[i] >> 32u) & 0x00000000FFFFFFFF);
+    degree_ed_arr[i][1] = (int)(sort_arr[i] & 0x00000000FFFFFFFF);
+    }
     
     for (int i = 0; i < v_count; ++i) {
        
