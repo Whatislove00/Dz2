@@ -15,11 +15,6 @@ int is_con(int **v_arr, int *is_c_arr, int cur_v, int v_count) {
     return ans;
 }
 
-int compare(const void *a, const void *b) {
-
-    return *(int*)a - *(int*)b;
-}
-
 void bubbleSort(int** num, int size);
 int main(int argc, char **argv) {
     FILE *file1;
@@ -59,15 +54,6 @@ int main(int argc, char **argv) {
 
     fprintf(file1, "}\n");
 
-
-    is_c_arr[0] = 1;
-
-    if (is_con(v_arr, is_c_arr, 0, v_count) == v_count - 1) {
-        printf("The given graph turned out to be connected\n");
-    }
-    else {
-        printf("The given graph turned out to be unconnected\n");
-    }
     int v1 = 0, v2 = 0;
 
     printf("Enter the edge you want to delete:");
