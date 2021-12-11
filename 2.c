@@ -20,6 +20,7 @@ int compare(const void *a, const void *b) {
     return *(int*)a - *(int*)b;
 }
 
+void bubbleSort(int** num, int size);
 int main(int argc, char **argv) {
     FILE *file1;
     FILE *file2;
@@ -97,41 +98,29 @@ int main(int argc, char **argv) {
 
     fprintf(file2, "}\n");
 
-    int **degree_ed_arr = (int**)malloc(v_count * sizeof(int*));
+    int** degree_ed_arr = (int**)malloc(v_count * sizeof(int*));
 
     for (int i = 0; i < v_count; ++i) {
         degree_ed_arr[i] = malloc(sizeof(int) * 2);
         degree_ed_arr[i][1] = i;
     }
-   
+
     for (int i = 0; i < v_count; ++i) {
 
         degree_ed_arr[i][0] = 0;
-       
+
         for (int j = 0; j < v_count; ++j) {
 
             degree_ed_arr[i][0] += v_arr[i][j];
         }
     }
 
-    unsigned long* sort_arr = (unsigned long*)malloc(sizeof(unsigned long) * v_count);
+    bubbleSort(degree_ed_arr, 8);
 
-    for(int i = 0 ; i < v_count; i++)
-    {
-    sort_arr[i] = ((unsigned long)degree_ed_arr[i][0] << 32u) + (unsigned long)degree_ed_arr[i][1];
-    }
+    for (int i = 0; i < v_count; ++i) {   
 
-    qsort(sort_arr, v_count, sizeof(unsigned long), compare);
-
-    for(int i = 0 ; i < v_count; i++)
-    {
-    degree_ed_arr[i][0] = (int)((sort_arr[i] >> 32u) & 0x00000000FFFFFFFF);
-    degree_ed_arr[i][1] = (int)(sort_arr[i] & 0x00000000FFFFFFFF);
-    }
-    
-    for (int i = 0; i < v_count; ++i) {
-       
         printf("Vertex number %d has degree %d\n", degree_ed_arr[i][1] + 1, degree_ed_arr[i][0]);
+
     }
     
 
@@ -148,4 +137,22 @@ int main(int argc, char **argv) {
     system("graph2.png");
 
     return 0;
+}
+void bubbleSort(int** num, int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = (size - 1); j > i; j--) 
+        {
+            if (num[j][0] < num[j - 1][0]) 
+            {
+                int temp1 = num[j - 1][0];
+                int temp2 = num[j - 1][1];  
+                num[j - 1][0] = num[j][0];
+                num[j - 1][1] = num[j][1];
+                num[j][0] = temp1;
+                num[j][1] = temp2;
+            }
+        }
+    }
 }

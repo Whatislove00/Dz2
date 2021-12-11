@@ -1,5 +1,3 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (dz4.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (dz2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
   2.c
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(121,61): warning C4293: <<: отрицательное или слишком большое смещение; поведение не определено
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(128,52): warning C4293: >>: отрицательное или слишком большое смещение; поведение не определено
-  dz2.vcxproj -> C:\Users\vladi\Documents\GitHub\Dz4\dz4\Debug\dz2.exe
+  dz2.vcxproj -> C:\Users\vladi\Documents\GitHub\Dz4\dz4\Debug\dz4.exe
