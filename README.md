@@ -50,17 +50,3 @@
 
     }
 ```
-
-## Структурная схема алгоритма
-
-![Alt-текст](https://github.com/KirillKhus/dz4-3sem/blob/main/diagram_dz.jpg)
-
-## Результат работы
-
-## Исходный граф
-
-![Alt-текст](https://github.com/KirillKhus/dz4-3sem/blob/main/graph1.png)
-
-## Модифицированный граф
-
-![Alt-текст](https://github.com/KirillKhus/dz4-3sem/blob/main/graph2.png)
