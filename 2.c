@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 void bubbleSort(int** num, int size);
-int main(int argc, char **argv) {
+int main(int v_count) {
     FILE *file1;
     FILE *file2;
 
@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     fprintf(file1, "graph g {\n");
     fprintf(file2, "graph g {\n");
 
-    int v_count = 0;
+    v_count = 0;
     printf("Enter the number of vertices in the graph: ");
     scanf_s("%d", &v_count);
     for (int i = 0; i < v_count; ++i) {
@@ -49,12 +49,6 @@ int main(int argc, char **argv) {
     scanf_s("%d%d", &v1, &v2);
     v1--;
     v2--;
-    
-    if (v_arr[v1][v2] == 0 || v_arr[v2][v1] == 0) {
-        printf("There is no specified edge in the graph\n");
-        return 1;
-    }
-    
     v_arr[v1][v2]--;
     v_arr[v2][v1]--;
 
@@ -96,7 +90,6 @@ int main(int argc, char **argv) {
         printf("Vertex number %d has degree %d\n", degree_ed_arr[i][1] + 1, degree_ed_arr[i][0]);
 
     }
-    
 
     for (int i = 0; i < v_count; ++i) {
 
