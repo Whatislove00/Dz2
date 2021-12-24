@@ -11,12 +11,7 @@
     printf("Enter the edge you want to delete:");
     scanf("%d%d", &v1, &v2);
     v1--;
-    v2--;
-    if (v_arr[v1][v2] == 0 || v_arr[v2][v1] == 0){
-        printf("There is no specified edge in the graph\n");
-        return 1;
-    }
-    
+    v2--;   
     v_arr[v1][v2]--;
     v_arr[v2][v1]--;
 ```
