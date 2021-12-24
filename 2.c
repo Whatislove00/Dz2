@@ -1,10 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <malloc.h>
 #include <stdlib.h>
 
 void bubbleSort(int** num, int size);
-int main(int v_count) {
+int main(void) {
     FILE *file1;
     FILE *file2;
 
@@ -13,11 +12,11 @@ int main(int v_count) {
     fprintf(file1, "graph g {\n");
     fprintf(file2, "graph g {\n");
 
-    v_count = 0;
+    int v_count = 0;
     printf("Enter the number of vertices in the graph: ");
     scanf_s("%d", &v_count);
     for (int i = 0; i < v_count; ++i) {
-        fprintf(file1, "%d;\n", i + 1);
+        fprintf(file1, "%d;\n", i + 1); 
         fprintf(file2, "%d;\n", i + 1);
     }
 
@@ -102,6 +101,14 @@ int main(int v_count) {
 
     return 0;
 }
+
+void swap(int* val1, int* val2) {
+    int tmp;
+    tmp = *val1;
+    *val1 = *val2;
+    *val2 = tmp;
+}
+
 void bubbleSort(int** num, int size)
 {
     for (int i = 0; i < size - 1; i++)
@@ -110,12 +117,14 @@ void bubbleSort(int** num, int size)
         {
             if (num[j][0] < num[j - 1][0]) 
             {
-                int temp1 = num[j - 1][0];
+                swap(&num[j - 1][0], &num[j][0]);
+                swap(&num[j - 1][1], &num[j][1]);
+                /*int temp1 = num[j - 1][0];
                 int temp2 = num[j - 1][1];  
                 num[j - 1][0] = num[j][0];
                 num[j - 1][1] = num[j][1];
                 num[j][0] = temp1;
-                num[j][1] = temp2;
+                num[j][1] = temp2;*/
             }
         }
     }
