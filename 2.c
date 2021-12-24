@@ -22,13 +22,10 @@ int main(int v_count) {
     }
 
     printf("Enter the adjacency matrix of a %d by %d graph:\n", v_count, v_count);
-    int *is_c_arr = (int*)malloc(v_count * sizeof(int));
     int **v_arr = (int**)malloc(v_count * sizeof(int*));
     for (int i = 0; i < v_count; ++i) {
-        is_c_arr[i] = 0;
         v_arr[i] = (int*)malloc(v_count * sizeof(int));
         for (int j = 0; j < v_count; ++j) {
-            int cur = 0;
             scanf_s("%d", &v_arr[i][j]);
             if (j >= i) {
                 int sup = v_arr[i][j];
