@@ -1,5 +1,2 @@
 ﻿  2.c
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(4,7): error C2061: синтаксическая ошибка: идентификатор "namespace"
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(4,7): error C2059: синтаксическая ошибка: ;
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(11,45): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\vladi\Documents\GitHub\Dz4\2.c(12,52): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  dz2.vcxproj -> C:\Users\vladi\Documents\GitHub\Dz4\dz4\x64\Debug\dz4.exe
